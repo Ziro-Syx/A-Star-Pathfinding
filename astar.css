@@ -6,8 +6,8 @@ body div {
 
 div#astar {
   background-image: url("Images/background.png");
-  width: 600px;
-  height: 750px;
+  width: 650px;
+  height: 800px;
   padding: 0em 0 3em 0;
 }
 
@@ -19,5 +19,5 @@ div#browserNotSupported {
 }
 
 span.right {
-	float: center;
+	float: right;
 }

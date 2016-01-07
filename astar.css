@@ -29,4 +29,5 @@ h1 {
 span.right {
 	float: right;
 	text-align: center;
+	margin-top: 10px;
 }

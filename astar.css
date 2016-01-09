@@ -16,6 +16,7 @@ div#right-content {
 	width:30%;
 	margin: 0;
 	padding:0;
+	position:absolute;
 }
 
 div#astar {

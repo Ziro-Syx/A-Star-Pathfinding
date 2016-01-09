@@ -8,13 +8,13 @@ define(["metrics"], function(metrics) {
 
 			fromTop = true;
 
-			for (columnIndex = 0; columnIndex <46; columnIndex ++) {
+			for (columnIndex = 0; columnIndex <47; columnIndex ++) {
 				for (rowIndex = 0; rowIndex < 44; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
-			for (columnIndex = 51; columnIndex <100; columnIndex ++) {
+			for (columnIndex = 47; columnIndex <100; columnIndex ++) {
 				for (rowIndex = 0; rowIndex < 15; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);

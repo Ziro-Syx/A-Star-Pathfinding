@@ -8,13 +8,18 @@ define(["metrics"], function(metrics) {
 
 			fromTop = true;
 
-			for (columnIndex = 0; columnIndex <30; columnIndex ++) {
-				for (rowIndex = 0; rowIndex < 40; rowIndex++) {
+			for (columnIndex = 0; columnIndex <45; columnIndex ++) {
+				for (rowIndex = 0; rowIndex < 55; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
-				
-			}	
+			}
+			for (columnIndex = 50; columnIndex <100; columnIndex ++) {
+				for (rowIndex = 0; rowIndex < 20; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
 		},
 		empty: function(board) {
 			

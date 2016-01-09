@@ -1,6 +1,5 @@
 div#content-wrapper {
 	margin: 0;
-	width: 100%;
 }
 
 div#astar {
@@ -23,7 +22,7 @@ div#browserNotSupported {
 
 div#toolbar{
   width: 550px;	
-  margin-right: 10px;
+  margin-right: 0px;
   margin-top: 10px;
 }
 

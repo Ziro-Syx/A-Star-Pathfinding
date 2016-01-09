@@ -27,13 +27,19 @@ define(["metrics"], function(metrics) {
 				}
 			}
 			for (columnIndex = 11; columnIndex <33; columnIndex ++) {
-				for (rowIndex = 47; rowIndex < 58; rowIndex++) {
+				for (rowIndex = 48; rowIndex < 58; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
 			for (columnIndex = 36; columnIndex <88; columnIndex ++) {
-				for (rowIndex = 47; rowIndex < 107; rowIndex++) {
+				for (rowIndex = 48; rowIndex < 107; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 11; columnIndex <33; columnIndex ++) {
+				for (rowIndex = 52; rowIndex < 65; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}

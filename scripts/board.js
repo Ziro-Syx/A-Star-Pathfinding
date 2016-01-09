@@ -26,6 +26,22 @@ define(["metrics"], function(metrics) {
 				fromTop = !fromTop;
 			}	
 		},
+		LMUWALLS: function(board) {
+			var columnIndex;
+			var fromTop;
+			var rowIndex;
+			var calculatedRowIndex;
+
+			fromTop = true;
+
+			for (columnIndex = 1; columnIndex < board.width; columnIndex += 2) {
+				for (rowIndex = 0; rowIndex < (board.height/3*2).integer(); rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+				fromTop = !fromTop;
+			}	
+		},
 		empty: function(board) {
 			
 		}

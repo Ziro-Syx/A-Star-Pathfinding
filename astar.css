@@ -15,6 +15,11 @@ div#astar {
   float: left;
 }
 
+#headerbutton{
+	float:right;
+	margin-right:10%;
+}
+
 a.button{
   -webkit-appearance: button;
   width: 134px;

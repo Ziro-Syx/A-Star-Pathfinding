@@ -8,9 +8,8 @@ define(["metrics"], function(metrics) {
 
 			fromTop = true;
 
-			for (columnIndex = 1; columnIndex <30; columnIndex ++) {
+			for (columnIndex = 0; columnIndex <30; columnIndex ++) {
 				for (rowIndex = 0; rowIndex < 40; rowIndex++) {
-					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 				fromTop = !fromTop;

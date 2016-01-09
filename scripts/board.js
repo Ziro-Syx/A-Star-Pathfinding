@@ -13,7 +13,7 @@ define(["metrics"], function(metrics) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
-				fromTop = !fromTop;
+				
 			}	
 		},
 		empty: function(board) {

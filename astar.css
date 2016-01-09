@@ -12,6 +12,13 @@ div#astar {
   width: 550px;
   height: 700px;
   margin: 0px;
+  float: left;
+}
+
+div#toolbar{
+  width: 550px;	
+  margin-right: 0px;
+  margin-top: 10px;
 }
 
 div#browserNotSupported {
@@ -19,12 +26,6 @@ div#browserNotSupported {
   background-color: #eee;
   border: 1px solid black;
   padding: 1em;
-}
-
-div#toolbar{
-  width: 550px;	
-  margin-right: 0px;
-  margin-top: 10px;
 }
 
 h1 {

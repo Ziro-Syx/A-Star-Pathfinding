@@ -1,6 +1,6 @@
 define(function() {
 	return {
-		boardWidth: 20,
-		boardHeight: 24
+		boardWidth: 100,
+		boardHeight: 124
 	};
 });

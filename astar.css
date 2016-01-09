@@ -84,6 +84,7 @@ header {
 }
 
 header h1 {
+  width:540px;
   margin: 0;
   font-size: 72px;
   font-weight: normal;
@@ -93,6 +94,7 @@ header h1 {
 }
 
 header h2 {
+  width:540px;
   margin: 0;
   font-size: 26px;
   font-weight: normal;

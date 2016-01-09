@@ -13,6 +13,7 @@ div#astar {
   width: 550px;
   height: 700px;
   padding: 0em 0 3em 0;
+  margin:0px;
 }
 
 div#browserNotSupported {
@@ -62,10 +63,10 @@ a:hover {
 
 header {
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
-  border-bottom: solid 1px #275da1;
+  border-bottom: solid 1px black;
 }
 
 header h1 {
@@ -103,7 +104,9 @@ aside#sidebar {
   font-size: 12px;
   line-height: 1.3;
   background: transparent url(../images/sidebar-bg.jpg) 0 0 no-repeat;
+  margin-top:0px;
 }
+
 aside a.button {
   display: block;
   width: 138px;

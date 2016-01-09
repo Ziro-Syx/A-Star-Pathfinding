@@ -16,10 +16,10 @@ div#astar {
 }
 
 #headerbutton{
-	float:right;
-	float:top;
-	margin-top:20px;
-	position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent url(../images/github-button.png) 0 0 no-repeat;
 }
 
 a.button{

@@ -1,5 +1,5 @@
 div#content-wrapper {
-	margin: auto;
+	margin: 0;
 	width: 100%;
 }
 
@@ -9,9 +9,9 @@ div#astar {
   background-size: contain;
   border-radius: 5px;
   border: 2px solid #73AD21;
-  width: 550px;
+  width: 75%;
   height: 700px;
-  margin-right: 10px;
+  margin: 0px;
 }
 
 div#browserNotSupported {
@@ -85,7 +85,7 @@ header h2 {
 
 div#sidebar {
   float: right;
-  width: 200px;
+  width: 25%;
   min-height: 504px;
   font-size: 12px;
   line-height: 1.3;

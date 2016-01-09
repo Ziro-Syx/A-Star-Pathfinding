@@ -33,7 +33,7 @@ define(["metrics"], function(metrics) {
 				}
 			}
 			for (columnIndex = 36; columnIndex <88; columnIndex ++) {
-				for (rowIndex = 47; rowIndex < 110; rowIndex++) {
+				for (rowIndex = 47; rowIndex < 107; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}

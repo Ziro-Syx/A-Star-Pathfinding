@@ -20,20 +20,20 @@ define(["metrics"], function(metrics) {
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
-			for (columnIndex = 49; columnIndex <100; columnIndex ++) {
+			for (columnIndex = 51; columnIndex <100; columnIndex ++) {
 				for (rowIndex = 18; rowIndex < 44; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
-			for (columnIndex = 10; columnIndex <30; columnIndex ++) {
-				for (rowIndex = 49; rowIndex < 64; rowIndex++) {
+			for (columnIndex = 11; columnIndex <33; columnIndex ++) {
+				for (rowIndex = 47; rowIndex < 58; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
-			for (columnIndex = 37; columnIndex <85; columnIndex ++) {
-				for (rowIndex = 49; rowIndex < 90; rowIndex++) {
+			for (columnIndex = 36; columnIndex <88; columnIndex ++) {
+				for (rowIndex = 47; rowIndex < 110; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}

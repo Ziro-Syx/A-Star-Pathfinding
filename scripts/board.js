@@ -10,6 +10,7 @@ define(["metrics"], function(metrics) {
 
 			for (columnIndex = 0; columnIndex <30; columnIndex ++) {
 				for (rowIndex = 0; rowIndex < 40; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 				fromTop = !fromTop;

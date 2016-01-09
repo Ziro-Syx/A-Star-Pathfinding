@@ -1,31 +1,5 @@
 define(["metrics"], function(metrics) {	
 	var patternBuilders = {
-		cubes: function(board) {
-			var rowIndex;
-			var columnIndex;
-
-			for (rowIndex = 0; rowIndex < board.height; rowIndex++) {
-				for (columnIndex = 0; columnIndex < board.width; columnIndex++) {
-					board.setMovementCost(columnIndex, rowIndex,  rowIndex % 4 === 0 || columnIndex % 4 === 0 ? board.movementCosts.empty : board.movementCosts.impassable);
-				}
-			}
-		},
-		verticalPillars: function(board) {
-			var columnIndex;
-			var fromTop;
-			var rowIndex;
-			var calculatedRowIndex;
-
-			fromTop = true;
-
-			for (columnIndex = 1; columnIndex < 20; columnIndex += 2) {
-				for (rowIndex = 0; rowIndex < (board.height/3*2).integer(); rowIndex++) {
-					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
-					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
-				}
-				fromTop = !fromTop;
-			}	
-		},
 		LMUWALLS: function(board) {
 			var columnIndex;
 			var fromTop;
@@ -34,8 +8,8 @@ define(["metrics"], function(metrics) {
 
 			fromTop = true;
 
-			for (columnIndex = 1; columnIndex < board.width; columnIndex += 2) {
-				for (rowIndex = 0; rowIndex < (board.height/3*2).integer(); rowIndex++) {
+			for (columnIndex = 1; columnIndex <30; columnIndex ++) {
+				for (rowIndex = 0; rowIndex < 40; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}

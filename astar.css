@@ -17,7 +17,7 @@ div#astar {
 
 #headerbutton{
 	float:right;
-	margin-right:10%;
+	float:top;
 	margin-top:20px;
 }
 
@@ -83,10 +83,7 @@ header {
 }
 
 header h1 {
-  width: 540px;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0.2em;
+  margin: 0;
   font-size: 72px;
   font-weight: normal;
   line-height: 1;
@@ -95,10 +92,7 @@ header h1 {
 }
 
 header h2 {
-  width: 540px;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
+  margin: 0;
   font-size: 26px;
   font-weight: normal;
   line-height: 1.3;

@@ -26,6 +26,18 @@ define(["metrics"], function(metrics) {
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
+			for (columnIndex = 10; columnIndex <30; columnIndex ++) {
+				for (rowIndex = 49; rowIndex < 64; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 37; columnIndex <85; columnIndex ++) {
+				for (rowIndex = 49; rowIndex < 90; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
 		},
 		empty: function(board) {
 			

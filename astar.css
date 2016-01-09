@@ -19,6 +19,7 @@ div#astar {
 	float:right;
 	float:top;
 	margin-top:20px;
+	position: relative;
 }
 
 a.button{

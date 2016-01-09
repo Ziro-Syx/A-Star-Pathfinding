@@ -12,6 +12,8 @@ div#astar {
   width: 550px;
   height: 700px;
   margin: 0px;
+  padding-right:250px;
+  float:left;
 }
 
 #headerbutton{

@@ -12,12 +12,11 @@ div#astar {
   width: 550px;
   height: 700px;
   margin: 0px;
-  float: left;
 }
 
 #headerbutton{
   position: absolute;
-  top: 30px;
+  top: 40px;
   right: 50px;
   background: transparent url(../images/github-button.png) 0 0 no-repeat;
 }
@@ -80,7 +79,6 @@ header {
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
   border-bottom: solid 1px black;
-  position:center;
 }
 
 header h1 {

@@ -21,6 +21,12 @@ div#browserNotSupported {
   padding: 1em;
 }
 
+div#toolbar{
+  width: 550px;	
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
 h1 {
 	text-align: center;
 }

@@ -11,7 +11,7 @@ div#astar {
   border: 2px solid #73AD21;
   width: 550px;
   height: 700px;
-  margin: 0px;
+  margin-right: 10px;
 }
 
 div#browserNotSupported {
@@ -23,7 +23,6 @@ div#browserNotSupported {
 
 h1 {
 	text-align: center;
-	
 }
 
 span.right {
@@ -82,9 +81,8 @@ div#sidebar {
   float: right;
   width: 200px;
   min-height: 504px;
-  padding-left: 20px;
   font-size: 12px;
   line-height: 1.3;
   background: transparent url(../images/sidebar-bg.jpg) 0 0 no-repeat;
-  margin-top:0px;
+  margin:0;
 }

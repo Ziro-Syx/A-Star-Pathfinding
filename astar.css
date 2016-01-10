@@ -10,7 +10,7 @@ div#astar {
   width: 550px;
   height: 700px;
   margin: 0 auto;
-  border-bottom: 1px black;
+  border-bottom: thick dotted #ff0000;
 }
 
 div#toolbar{

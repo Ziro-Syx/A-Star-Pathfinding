@@ -10,7 +10,7 @@ div#astar {
   width: 550px;
   height: 700px;
   margin: 0 auto;
-  border-bottom: thick black;
+  border-bottom: thick double black;
 }
 
 div#toolbar{

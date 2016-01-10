@@ -12,15 +12,6 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
 }
 
-div#astar {
-  background-image: url("Images/background.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  border-radius: 5px;
-  border: 5px solid #fff;
-  width: 550px;
-  height: 700px;
-}
 
 /**
  * Remove default margin.
@@ -458,18 +449,17 @@ a:hover {
 }
 
 header {
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: 'Architects Daughter', 'Helvetica Neue', Helvetica, Arial, serif;
   background: #2e7bcf url(../images/header-bg.jpg) 0 0 repeat-x;
   border-bottom: solid 1px #275da1;
 }
 
 header h1 {
-  width: 540px;
   margin-top: 0;
-  margin-bottom: 0.2em;
-  font-size: 72px;
+  margin-bottom: 0;
+  font-size: 60px;
   font-weight: normal;
   line-height: 1;
   color: #fff;

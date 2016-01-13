@@ -1,0 +1,51 @@
+body {
+  margin:0;
+  padding:0;
+}
+
+div#Top-Panel {
+  width: 550px;
+  margin: 0 auto;
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+div#Text-Boxes{
+  margin-left:10px;
+}
+
+button{
+	float:right;
+	margin-right: 20px;
+}
+
+div#astar {
+  background-image: url("../Images/background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 550px;
+  height: 700px;
+  margin: 0 auto;
+  border: solid black;
+}
+
+div#Bottom-Panel{
+  width: 550px;	
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+span.right {
+  float: right;
+  text-align: center;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+span.left {
+  float: left;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+

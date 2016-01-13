@@ -1,5 +1,5 @@
 function simulateClick(a, b) {
-    var sw = document.width();
+    var sw = window.width();
     var val = (sw-550)/2;
     var x = val + a;
     var y = b;

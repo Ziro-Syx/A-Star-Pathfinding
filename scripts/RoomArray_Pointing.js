@@ -14,35 +14,37 @@ function simulateClick(x, y) {
 	}
 	
 	function FindPath() {
-    var a = document.getElementById("Dept").value;
+    	var a = document.getElementById("Dept").value;
 	var b = document.getElementById("Goal").value;
 	var position;
+	var sw = document.width();
+	var x = (sw-550)/2;
 	
 	if (a == "Entrance" && b == "Set Class"){
-		simulateClick(620, 650);		
-		simulateClick(620, 650);
+		simulateClick(x+60, 650);		
+		simulateClick(x+60, 650);
 		return;
 	}
 	if (b == "Entrance"){
-		simulateClick(620, 650);
+		simulateClick(x+60, 650);
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;
 	}
 	else if (b == "TM1-01"){
-		simulateClick(610, 500);
+		simulateClick(x+50, 500);
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;
 	}
 	else if (b == "Blue Zone"){
-		simulateClick(610, 500);
+		simulateClick(x+50, 500);
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;
 	}
 	else if (b == "Red Zone"){
-		simulateClick(610, 300);
+		simulateClick(x+50, 300);
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;

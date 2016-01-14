@@ -57,7 +57,7 @@ define(["metrics"], function(metrics) {
 				}
 			}
 			for (columnIndex = 4; columnIndex <7; columnIndex ++) {
-				for (rowIndex = 44; rowIndex < 120; rowIndex++) {
+				for (rowIndex = 44; rowIndex < 115; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}

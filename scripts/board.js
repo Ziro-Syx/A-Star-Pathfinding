@@ -50,8 +50,8 @@ define(["metrics"], function(metrics) {
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
-			for (columnIndex = 11; columnIndex <16; columnIndex ++) {
-				for (rowIndex = 84; rowIndex < 92; rowIndex++) {
+			for (columnIndex = 11; columnIndex <14; columnIndex ++) {
+				for (rowIndex = 84; rowIndex < 94; rowIndex++) {
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}

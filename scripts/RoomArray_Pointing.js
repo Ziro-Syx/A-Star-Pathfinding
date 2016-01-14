@@ -32,6 +32,7 @@
 		pos(60, 650);		
 		pos(60, 650);
 	}
+	
 	function FindPath() {
 	$.when(SetA()).then(SetB());
 	}
@@ -49,6 +50,12 @@
 	}
 	else if (a == "Red Zone"){
 		pos(50, 310);
+	}
+	else if (a == "Yellow Zone"){
+		pos(500, 310);
+	}
+	else if (a == "Green Zone"){
+		pos(500, 140);
 	}
 	}
 	
@@ -83,5 +90,17 @@
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;
-	}	
+	}
+	else if (b == "Yellow Zone"){
+		pos(500, 310);
+		position = b;
+		document.getElementById("Dept").value = b;
+		return;
+	}
+	else if (b == "Green Zone"){
+		pos(500, 140);
+		position = b;
+		document.getElementById("Dept").value = b;
+		return;
+	}
 	}

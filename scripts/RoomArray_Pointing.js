@@ -1,8 +1,4 @@
-function simulateClick(a, b) {
-    var sw =  $(window).width();
-    var val = (sw-550)/2;
-    var x = val + a;
-    var y = b;
+function simulateClick(x, y) {
     var clickEvent= document.createEvent('MouseEvents');
     clickEvent.initMouseEvent(
     'click', true, true, window, 0,
@@ -11,43 +7,70 @@ function simulateClick(a, b) {
     );
     document.elementFromPoint(x, y).dispatchEvent(clickEvent);
 	}
-
-	function foo() {
-		simulateClick(620, 650);		
-		simulateClick(620, 650);
+	function pos(x,y){
+	var w = window,
+		d = document,
+		e = d.documentElement,
+		g = d.getElementsByTagName('body')[0],
+		iw = w.innerWidth || e.clientWidth || g.clientWidth,
+		ih = w.innerHeight|| e.clientHeight|| g.clientHeight;
+	var val = (iw-550)/2;
+    var a = val + x;
+    var b = y;
+	simulateClick(a,b);
+	}
+	function start() {
+		pos(60, 650);		
+		pos(60, 650);
+	}
+	function FindPath() {
+	$.when(SetA()).then(SetB());
 	}
 	
-	function FindPath() {
-    	var a = document.getElementById("Dept").value;
+	function SetA(){
+	var a = document.getElementById("Dept").value;
+	if (a == "Entrance"){
+		pos(60, 650);
+	}
+	else if (a == "TM1-01"){
+		pos(50, 500);
+	}
+	else if (a == "Blue Zone"){
+		pos(50, 500);
+	}
+	else if (a == "Red Zone"){
+		pos(50, 310);
+	}
+	}
+	
+	function SetB(){
 	var b = document.getElementById("Goal").value;
 	var position;
 	
-	
-	if (a == "Entrance" && b == "Set Class"){
-		simulateClick(60, 650);		
-		simulateClick(60, 650);
+	if (b == "Set Class"){
+		pos(60, 650);		
 		return;
 	}
-	if (b == "Entrance"){
-		simulateClick(60, 650);
+	else if (b == "Entrance"){
+		pos(60, 650);
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;
 	}
 	else if (b == "TM1-01"){
-		simulateClick(50, 500);
+		pos(50, 500);
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;
 	}
 	else if (b == "Blue Zone"){
-		simulateClick(50, 500);
+		pos(50, 500);
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;
 	}
 	else if (b == "Red Zone"){
-		simulateClick(50, 300);
+		pos(50, 310);
 		position = b;
 		document.getElementById("Dept").value = b;
 		return;

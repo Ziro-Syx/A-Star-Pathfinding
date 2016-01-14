@@ -7,18 +7,23 @@ function simulateClick(x, y) {
     );
     document.elementFromPoint(x, y).dispatchEvent(clickEvent);
 	}
-	function pos(x,y){
+    function pos(x,y){
 	var w = window,
 		d = document,
 		e = d.documentElement,
 		g = d.getElementsByTagName('body')[0],
 		iw = w.innerWidth || e.clientWidth || g.clientWidth,
 		ih = w.innerHeight|| e.clientHeight|| g.clientHeight;
-	var val = (iw-550)/2;
+    if (iw>=550){
+    var val = (iw-550)/2;
     var a = val + x;
     var b = y;
-	simulateClick(a,b);
-	}
+    } else (
+    var a = x;
+    var b = y;
+    }
+    simulateClick(a,b);
+    }
 	function start() {
 		pos(60, 650);		
 		pos(60, 650);

@@ -1,4 +1,4 @@
-function simulateClick(x, y) {
+    function simulateClick(x, y) {
     var clickEvent= document.createEvent('MouseEvents');
     clickEvent.initMouseEvent(
     'click', true, true, window, 0,
@@ -6,7 +6,8 @@ function simulateClick(x, y) {
     false, false, 0, null
     );
     document.elementFromPoint(x, y).dispatchEvent(clickEvent);
-	}
+    }
+	
     function pos(x,y){
 	var w = window,
 		d = document,
@@ -14,15 +15,18 @@ function simulateClick(x, y) {
 		g = d.getElementsByTagName('body')[0],
 		iw = w.innerWidth || e.clientWidth || g.clientWidth,
 		ih = w.innerHeight|| e.clientHeight|| g.clientHeight;
+		
     if (iw>=550){
-    var val = (iw-550)/2;
-    var a = val + x;
-    var b = y;
-    } else (
-    var a = x;
-    var b = y;
+	    var val = (iw-550)/2;
+	    var a = val + x;
+	    var b = y;
+	    simulateClick(a,b);
+    }else{
+	    var a = x;
+	    var b = y;
+	    simulateClick(a,b);
     }
-    simulateClick(a,b);
+    
     }
 	function start() {
 		pos(60, 650);		

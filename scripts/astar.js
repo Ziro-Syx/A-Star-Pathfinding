@@ -11,7 +11,9 @@ define(["jquery", "board", "renderer", "pathFinder"], function($,boardFactory,re
 			var canvas = $('#astarCanvas');
 			
 			$('#resetButton').click(function() {
+				
 				reset(that.board, $('#boardType').val());
+				start();
 			});
 			
 			canvas.click(function(e) {

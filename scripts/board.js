@@ -80,10 +80,8 @@ define(["metrics"], function(metrics) {
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
-		},
-		empty: function(board) {
-			
 		}
+		
 	}
 		
 	return {

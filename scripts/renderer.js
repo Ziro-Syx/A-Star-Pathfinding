@@ -16,7 +16,7 @@ define(["jquery"], function($) {
 		};
 	}
 	
-	function drawGrid(context, boardMetrics) {
+	/*function drawGrid(context, boardMetrics) {
 		var columnIndex;
 		var rowIndex;
 		
@@ -31,7 +31,7 @@ define(["jquery"], function($) {
 			context.lineTo(columnIndex * boardMetrics.cellWidth + 0.5, boardMetrics.height);
 		}
 		context.stroke();
-	}
+	}*/
 	
 	function drawCell(context, columnIndex, rowIndex, boardMetrics) {
 		var left;
@@ -86,7 +86,7 @@ define(["jquery"], function($) {
 			
 			context.clearRect(0, 0, metrics.width, metrics.height);
 			
-			context.fillStyle = "rgba(38,104,209,1.0)";
+			context.fillStyle = "rgba(38,104,209,0)";
 			for (rowIndex = 0; rowIndex < board.height; rowIndex++) {
 				for (columnIndex = 0; columnIndex < board.width; columnIndex++) {
 					movementCost = board.getMovementCost(columnIndex, rowIndex);

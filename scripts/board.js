@@ -1,6 +1,6 @@
 define(["metrics"], function(metrics) {	
 	var patternBuilders = {
-		LMUWALLS: function(board) {
+		FloorZero: function(board) {
 			var columnIndex;
 			var fromTop;
 			var rowIndex;
@@ -80,10 +80,8 @@ define(["metrics"], function(metrics) {
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
 			}
-		},
-		empty: function(board) {
-			
 		}
+		
 	}
 		
 	return {

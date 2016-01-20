@@ -1,4 +1,163 @@
-    function simulateClick(x, y) {
+$.getScript("board.js");
+
+	var deptstart;
+	var deptchange;
+	var goalend;
+	var goalchange;
+	var leveldept;
+	var levelgoal;
+	var error;
+	
+	function whereclick(){
+		var x = event.clientX;     // Get the horizontal coordinate
+		var y = event.clientY;     // Get the vertical coordinate
+		var coor = "X coords: " + x + ", Y coords: " + y;
+		//alert(coor);
+	}
+	
+	function levels(){
+		var x = event.clientX;     // Get the horizontal coordinate
+		var y = event.clientY;     // Get the vertical coordinate
+		if(x >= 580 && x < 680 && y >= 65 && y < 120){
+			alert(leveldept + levelgoal);
+			
+		}
+	}
+	
+	function Start(){
+		SetFloorZero();
+		setTimeout(myFunction, 300);
+		SetEntrance();
+		return;
+	}
+	
+	function SetFloorZero(){
+		reset(FloorZero);
+	}
+	
+	
+    
+	function SetEntrance() {
+		pos(60, 650); //Two click on the entrance to be on the starting point.
+		pos(60, 650);
+	}
+
+	
+	function FindPath() {
+	$.when(SetA()).then(SetB()); //Click on location dictated by 1st box, then on the 2nd one.
+	return;
+	}
+	
+	function SetA(){
+	var aw = document.getElementById("Dept").value; //Get value from Text box with same ID
+	var a = [];
+	a = aw.split("-"); // Split with "-"
+	TransData(a[0],a[1]);
+	leveldept = level;
+	if (error == 1){
+		alert("Unknown departure point.")
+		error = 0;
+		}
+	}
+	
+	function SetB(){
+	var bh = document.getElementById("Goal").value; //Get value from Text box with same ID
+	var b = [];
+	b = bh.split("-"); // Split with "-"
+	TransData(b[0],b[1]);
+	levelgoal = level;
+	if (error == 1){
+		alert("Unknown destination point.")
+		error = 0;
+		}
+	}
+	
+	//Database of the rooms
+	
+	function TransData(zone,room){
+	if (zone == "Entrance"){
+		level = '0';
+		pos(60, 650);
+	}else if (zone == "Blue Zone"){
+		level = '0';
+		pos(50, 500);
+	}else if (zone == "Red Zone"){
+		level = '0';
+		pos(50, 310);
+	}else if (zone == "Yellow Zone"){
+		level = '0';
+		pos(500, 310);
+	}else if (zone == "Green Zone"){
+		level = '0';
+		pos(500, 140);
+	}else if (zone =="TM"){
+		level = '0';
+		pos(50, 400);
+	}else if (zone =="BEL"){
+		level = '0';
+				if(room >= 0 && room <20){
+					pos(500, 140);
+				}else if(room >= 20 && room <40){
+					pos(450, 140);
+				}else if(room >= 40 && room <60){
+					pos(400, 140);
+				}else{
+					pos(60, 650);
+					error = 1;
+					return;
+				}		
+	}else if (zone =="T1"){
+		level = '1';
+		pos(195, 400);
+	}else if (zone =="T2"){
+		level = '2';
+		pos(195, 400);
+	}else if (zone =="T3"){
+		level = '3';
+		pos(195, 400);
+	}else if (zone =="T4"){
+		level = '4';
+		pos(195, 400);
+	}else if (zone =="T5"){
+		level = '5';
+		pos(195, 400);
+	}else if (zone =="T6"){
+		level = '6';
+		pos(195, 400);
+	}else if (zone =="T7"){
+		level = '7';
+		pos(195, 400);
+	}else if (zone =="T8"){
+		level = '8';
+		pos(195, 400);
+	}else if (zone =="T9"){
+		level = '9';
+		pos(195, 400);
+	}else if (zone =="T10"){
+		level = '10';
+		pos(195, 400);
+	}else if (zone =="T11"){
+		level = '11';
+		pos(195, 400);
+	}else if (zone =="T12"){
+		level = '12';
+		pos(195, 400);
+	}else if (zone =="T13"){
+		level = '13';
+		pos(195, 400);
+	}else{
+		pos(60, 650);
+		error = 1;
+	}
+	
+	}
+	
+	
+	
+	
+	//Click function by system
+	
+	function simulateClick(x, y) {
     var clickEvent= document.createEvent('MouseEvents');
     clickEvent.initMouseEvent(
     'click', true, true, window, 0,
@@ -26,81 +185,4 @@
 	    var b = y;
 	    simulateClick(a,b);
     }
-    
-    }
-	function start() {
-		pos(60, 650);		
-		pos(60, 650);
-	}
-	
-	function FindPath() {
-	$.when(SetA()).then(SetB());
-	}
-	
-	function SetA(){
-	var a = document.getElementById("Dept").value;
-	if (a == "Entrance"){
-		pos(60, 650);
-	}
-	else if (a == "TM1-01"){
-		pos(50, 500);
-	}
-	else if (a == "Blue Zone"){
-		pos(50, 500);
-	}
-	else if (a == "Red Zone"){
-		pos(50, 310);
-	}
-	else if (a == "Yellow Zone"){
-		pos(500, 310);
-	}
-	else if (a == "Green Zone"){
-		pos(500, 140);
-	}
-	}
-	
-	function SetB(){
-	var b = document.getElementById("Goal").value;
-	var position;
-	
-	if (b == "Set Class"){
-		pos(60, 650);		
-		return;
-	}
-	else if (b == "Entrance"){
-		pos(60, 650);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "TM1-01"){
-		pos(50, 500);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "Blue Zone"){
-		pos(50, 500);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "Red Zone"){
-		pos(50, 310);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "Yellow Zone"){
-		pos(500, 310);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "Green Zone"){
-		pos(500, 140);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
 	}

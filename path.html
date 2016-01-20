@@ -3,41 +3,48 @@
 	<head>
 		<meta charset="utf-8">
 		<title>LMU MAP</title>
+		<script type='text/javascript' > 
+		  var WhatLevel = 0; 
+		</script>
 		<script src="scripts/modernizr-1.7.min.js" type="text/javascript" charset="utf-8"></script>
 		<script data-main="scripts/bootstrapper" src="scripts/require-jquery.js"></script>
     		<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="stylesheets/astar.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		<script src="scripts/RoomArray_Pointing.js"></script>
+		<script type="text/javascript" src="scripts/RoomArray_Pointing.js"></script>
+		<script type="text/javascript" src="scripts/board.js"></script>
   
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
 	</head>
-	<body onload="start()">	
+	<body onload="Start()" onclick="levels()" >	
 	<div id="Content">
 		<div id = "Top-Panel">
 			<div id="Text-Boxes">
 			Dept: <input type="text" id="Dept" value="Entrance">
 			Goal: <input type="text" id="Goal" value="Set Class">
+			<button onclick="SetEntrance()">Home</button>
 			<button onclick="FindPath()">Start</button>
+			
 			</div>
 			
 		</div>
 		<div id="astar">
 		</div>
 		<div id="Bottom-Panel">
-			<span class="right">Time taken to calculate path: <span id="timeTaken">N/A</span></span>
+			<span class="right"></span></span>
 			<span class="left">
 				<select id="boardType">
-					<option value="LMUWALLS">LMU associated map</option>
+					<option value="FloorZero">LMU associated map</option>
 					<option value="empty">Empty</option>
 				</select>
-				<input id="resetButton" type="button" value="Reset" / >
+				<div id="resetButton" type="button" value="Reset"></div>
 			</span>
 		</div>
 	</div>
+	
 	</body>
 </html>
 

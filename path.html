@@ -3,29 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>LMU MAP</title>
-		<script type='text/javascript' > 
-		  var WhatLevel = 0; 
-		</script>
 		<script src="scripts/modernizr-1.7.min.js" type="text/javascript" charset="utf-8"></script>
 		<script data-main="scripts/bootstrapper" src="scripts/require-jquery.js"></script>
     		<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="stylesheets/astar.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<script type="text/javascript" src="scripts/RoomArray_Pointing.js"></script>
-		<script type="text/javascript" src="scripts/board.js"></script>
+		<script type="text/javascript" src="scripts/Datarooms.js"></script>
   
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
 	</head>
-	<body onload="Start()" onclick="levels()" >	
+	<body onload="Start()"  >	
 	<div id="Content">
 		<div id = "Top-Panel">
 			<div id="Text-Boxes">
-			Dept: <input type="text" id="Dept" value="Entrance">
-			Goal: <input type="text" id="Goal" value="Set Class">
-			<button onclick="SetEntrance()">Home</button>
+			From: <input type="text" id="Dept" value="Entrance">
+			To: <input type="text" id="Goal" value="Set Class">
+			<button onclick="Entrance()">Home</button>
 			<button onclick="FindPath()">Start</button>
 			
 			</div>
@@ -34,17 +31,35 @@
 		<div id="astar">
 		</div>
 		<div id="Bottom-Panel">
-			<span class="right"></span></span>
 			<span class="left">
 				<select id="boardType">
-					<option value="FloorZero">LMU associated map</option>
-					<option value="empty">Empty</option>
+					<option value="FloorZero">Floor 0</option>
+					<option value="FloorOne">Floor 1</option>
+					<option value="FloorUpper">Upper Floors</option>
+					<option value="Empty">Empty</option>
 				</select>
-<<<<<<< HEAD
-				<div id="resetButton" type="button" value="Reset"></div>
-=======
-				<input id="resetButton" type="button" value="Reset" />
->>>>>>> origin/gh-pages
+				<input id="resetButton" type="button" value="Reset"/>
+			</span>
+			<span class="right">
+				
+				<button id="SetFloor" onclick="levels()">Toggle Floors</button>
+				<select id="Floors">
+					<option value="Floor0">Floor 0</option>
+					<option value="Floor1">Floor 1</option>
+					<option value="1">Tower Building Floor 1</option>
+					<option value="2">Tower Building Floor 2</option>
+					<option value="3">Tower Building Floor 3</option>
+					<option value="4">Tower Building Floor 4</option>
+					<option value="5">Tower Building Floor 5</option>
+					<option value="6">Tower Building Floor 6</option>
+					<option value="7">Tower Building Floor 7</option>
+					<option value="8">Tower Building Floor 8</option>
+					<option value="9">Tower Building Floor 9</option>
+					<option value="10">Tower Building Floor 10</option>
+					<option value="11">Tower Building Floor 11</option>
+					<option value="12">Tower Building Floor 12</option>
+					<option value="13">Tower Building Floor 13</option>
+				</select>
 			</span>
 		</div>
 	</div>

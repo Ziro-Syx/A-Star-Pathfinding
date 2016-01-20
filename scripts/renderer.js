@@ -16,11 +16,11 @@ define(["jquery"], function($) {
 		};
 	}
 	
-	/*function drawGrid(context, boardMetrics) {
+	function drawGrid(context, boardMetrics) {
 		var columnIndex;
 		var rowIndex;
 		
-		context.strokeStyle="rgba(228,228,228,1.0)";
+		context.strokeStyle="rgba(228,228,228,0)";
 		for (rowIndex = 1; rowIndex < boardMetrics.boardHeight; rowIndex++) {
 			context.moveTo(0, rowIndex * boardMetrics.cellHeight + 0.5);
 			context.lineTo(boardMetrics.width, rowIndex * boardMetrics.cellHeight + 0.5);
@@ -31,7 +31,7 @@ define(["jquery"], function($) {
 			context.lineTo(columnIndex * boardMetrics.cellWidth + 0.5, boardMetrics.height);
 		}
 		context.stroke();
-	}*/
+	}
 	
 	function drawCell(context, columnIndex, rowIndex, boardMetrics) {
 		var left;

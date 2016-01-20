@@ -20,7 +20,6 @@ button{
 }
 
 div#astar {
-  background-image: url("../Images/background.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 550px;
@@ -33,6 +32,10 @@ div#Bottom-Panel{
   width: 550px;	
   margin: 0 auto;
   margin-top: 10px;
+}
+
+#Floors,#boardType,#resetButton{
+	display:none;
 }
 
 span.right {

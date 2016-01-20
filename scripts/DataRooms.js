@@ -29,16 +29,11 @@
 					pos(400, 140);
 				}else{
 					pos(60, 650);
-<<<<<<< HEAD
 					alert("Unknown Location/Destination");
-=======
-					error = 1;
->>>>>>> origin/gh-pages
 					return;
 				}		
 	}else if (zone =="T1"){
 		level = '1';
-<<<<<<< HEAD
 				if(room >= 0 && room <20){
 					pos(165, 400);
 				}else if(room >= 20 && room <40){
@@ -50,9 +45,6 @@
 					alert("Unknown Location/Destination");
 					return;
 				}	
-=======
-		pos(195, 400);
->>>>>>> origin/gh-pages
 	}else if (zone =="T2"){
 		level = '2';
 		pos(195, 400);
@@ -91,14 +83,8 @@
 		pos(195, 400);
 	}else{
 		pos(60, 650);
-<<<<<<< HEAD
 		alert("Unknown Location/Destination");
 		return;	
 	}
 	return;
-=======
-		error = 1;
-	}
-	
->>>>>>> origin/gh-pages
 	}

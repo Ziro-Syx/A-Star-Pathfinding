@@ -1,8 +1,8 @@
 
-	var deptstart;
-	var deptchange;
-	var goalend;
-	var goalchange;
+	var deptstart = [];
+	var deptchange = [];
+	var goalend = [];
+	var goalchange = [];
 	var leveldept;
 	var levelgoal;
 	var error;
@@ -21,8 +21,6 @@
 			if (levelgoal == 0){
 				alert(levelgoal);
 			}else if (levelgoal == 1){
-				alert(x);
-				alert(y);
 				alert(levelgoal);
 				$('#Floors').val('1');
 				ChangeFloor(1);
@@ -37,20 +35,46 @@
 		}
 	}
 	
-	
-	
 	function ChangeFloor(x){
 		if(x == 0){
 			$('#boardType').val('FloorZero').change();
 			$('#resetButton').click();
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
 		}else if(x == 1){
 			$('#boardType').val('FloorOne').change();
 			$('#resetButton').click();
-			var body = document.getElementsByTagName('body')[0];
-			body.style.backgroundImage = "url('FloorOne.png')";
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorOne.png')";
+			return;
 		}else if(x >= 2 && x < 14){
 			$('#boardType').val('FloorUpper').change();
 			$('#resetButton').click();
+			if (x == 2){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 3){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 4){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 5){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 6){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 7){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 8){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 9){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 10){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 11){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 12){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 13){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else{
+				return;
+			}
 		}else{
 			return;
 		}
@@ -64,38 +88,56 @@
 	
 	function Start(){
 		
-		document.getElementById('astar').style.backgroundImage = "url('FloorZero.png')";
+		document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
 		ChangeFloor(0);
 	}
 
 	
 	function FindPath() {
+	Start();
 	$.when(SetA()).then(SetB()); //Click on location dictated by 1st box, then on the 2nd one.
+	TransData(deptstart[0],deptstart[1]);
+	leveldept = level;
+	if (error == 1){
+		alert("Unknown departure point.")
+		error = 0;
+		}
+	TransData(goalend[0],goalend[1]);
+	levelgoal = level;
+	if (error == 1){
+		alert("Unknown destination point.")
+		error = 0;
+		}
+	if(leveldept !=0 && leveldept != levelgoal){
+		ChangeFloor(leveldept);
+		TransData(deptstart[0],deptstart[1]);
+		TransData(goalend[0],goalend[1]);
+		alert("Your path is on multiple floors. \nTo see the rest of the way to go, click on toggle below the map !")
+	}
 	return;
+	}
+	
+	function MultiFindPath(){
+		
+		
 	}
 	
 	function SetA(){
 	var aw = document.getElementById("Dept").value; //Get value from Text box with same ID
 	var a = [];
 	a = aw.split("-"); // Split with "-"
-	TransData(a[0],a[1]);
-	leveldept = level;
-	if (error == 1){
-		alert("Unknown departure point.")
-		error = 0;
-		}
+	deptstart[0] = a [0];
+	deptstart[1] = a [1];
+	
+	
 	}
 	
 	function SetB(){
 	var bh = document.getElementById("Goal").value; //Get value from Text box with same ID
 	var b = [];
 	b = bh.split("-"); // Split with "-"
-	TransData(b[0],b[1]);
-	levelgoal = level;
-	if (error == 1){
-		alert("Unknown destination point.")
-		error = 0;
-		}
+	goalend[0] = b [0];
+	goalend[1] = b [1];
 	}
 	
 	//Click function by system

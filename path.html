@@ -8,36 +8,62 @@
     		<meta http-equiv="X-UA-Compatible" content="chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="stylesheets/astar.css" type="text/css" media="screen" title="no title" charset="utf-8">
-		<script src="scripts/RoomArray_Pointing.js"></script>
+		<script type="text/javascript" src="scripts/RoomArray_Pointing.js"></script>
+		<script type="text/javascript" src="scripts/Datarooms.js"></script>
   
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
 	</head>
-	<body onload="start()">	
+	<body onload="Start()"  >	
 	<div id="Content">
 		<div id = "Top-Panel">
 			<div id="Text-Boxes">
-			Dept: <input type="text" id="Dept" value="Entrance">
-			Goal: <input type="text" id="Goal" value="Set Class">
+			From: <input type="text" id="Dept" value="Entrance">
+			To: <input type="text" id="Goal" value="Set Class">
+			<button onclick="Entrance()">Home</button>
 			<button onclick="FindPath()">Start</button>
+			
 			</div>
 			
 		</div>
 		<div id="astar">
 		</div>
 		<div id="Bottom-Panel">
-			<span class="right">Time taken to calculate path: <span id="timeTaken">N/A</span></span>
 			<span class="left">
 				<select id="boardType">
-					<option value="LMUWALLS">LMU associated map</option>
-					<option value="empty">Empty</option>
+					<option value="FloorZero">Floor 0</option>
+					<option value="FloorOne">Floor 1</option>
+					<option value="FloorUpper">Upper Floors</option>
+					<option value="Empty">Empty</option>
 				</select>
-				<input id="resetButton" type="button" value="Reset" / >
+				<input id="resetButton" type="button" value="Reset"/>
+			</span>
+			<span class="right">
+				
+				<button id="SetFloor" onclick="levels()">Toggle Floors</button>
+				<select id="Floors">
+					<option value="Floor0">F0</option>
+					<option value="Floor1">F1</option>
+					<option value="1">T1</option>
+					<option value="2">T2</option>
+					<option value="3">T3</option>
+					<option value="4">T4</option>
+					<option value="5">T5</option>
+					<option value="6">T6</option>
+					<option value="7">T7</option>
+					<option value="8">T8</option>
+					<option value="9">T9</option>
+					<option value="10">T10</option>
+					<option value="11">T11</option>
+					<option value="12">T12</option>
+					<option value="13">T13</option>
+				</select>
 			</span>
 		</div>
 	</div>
+	
 	</body>
 </html>
 

@@ -1,4 +1,141 @@
-    function simulateClick(x, y) {
+
+	var deptstart = [];
+	var deptchange = [];
+	var goalend = [];
+	var goalchange = [];
+	var leveldept;
+	var levelgoal;
+	var level;
+
+	function Start(){
+		document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
+		ChangeFloor(0);
+		Entrance();
+	}
+	function Entrance(){
+		ChangeFloor(0);
+		pos(60, 650); //Two click on the entrance to be on the starting point.
+		pos(60, 650);
+	}
+	
+
+	
+	function FindPath() {
+	Start();
+	$.when(SetA()).then(SetB()); //Click on location dictated by 1st box, then on the 2nd one.
+	TransData(deptstart[0],deptstart[1]);
+	leveldept = level;
+	TransData(goalend[0],goalend[1]);
+	levelgoal = level;
+
+	if(leveldept != 0 || leveldept != levelgoal){
+		if (leveldept == levelgoal){
+			ChangeFloor(leveldept);
+			TransData(deptstart[0],deptstart[1]);
+			TransData(goalend[0],goalend[1]);
+		}else{
+		ChangeFloor(leveldept);
+		TransData(deptstart[0],deptstart[1]);
+		pos(195, 400);
+		alert("Your path is on multiple floors. \nTo see the rest of the way to go, click on toggle below the map !")
+		}
+	}
+	return;
+	}
+	
+	function levels(){
+		if(leveldept != levelgoal){
+			if (level == leveldept){
+				$('#Floors').val(levelgoal);
+				ChangeFloor(levelgoal);
+				MultiFindPath();
+			}else if (level == levelgoal){
+				$('#Floors').val(leveldept);
+				ChangeFloor(leveldept);
+				MultiFindPath();
+			}
+		}else{
+			alert("You don't need to go on another floor for your path.");
+			return;
+		}
+	}
+	
+	function MultiFindPath(){
+		if (level == leveldept){
+			pos(195, 400);
+			TransData(goalend[0],goalend[1]);
+		} else if (level == levelgoal){
+			TransData(deptstart[0],deptstart[1]);
+			pos(195, 400);
+			
+		}
+	}
+	
+	function SetA(){
+	var aw = document.getElementById("Dept").value; //Get value from Text box with same ID
+	var a = [];
+	a = aw.split("-"); // Split with "-"
+	deptstart[0] = a [0];
+	deptstart[1] = a [1];
+	}
+	
+	function SetB(){
+	var bh = document.getElementById("Goal").value; //Get value from Text box with same ID
+	var b = [];
+	b = bh.split("-"); // Split with "-"
+	goalend[0] = b [0];
+	goalend[1] = b [1];
+	}
+	
+	function ChangeFloor(x){
+		if(x == 0){
+			$('#boardType').val('FloorZero').change();
+			$('#resetButton').click();
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
+		}else if(x == 1){
+			$('#boardType').val('FloorOne').change();
+			$('#resetButton').click();
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorOne.png')";
+			return;
+		}else if(x >= 2 && x < 14){
+			$('#boardType').val('FloorUpper').change();
+			$('#resetButton').click();
+			if (x == 2){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 3){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 4){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 5){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 6){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 7){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 8){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 9){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 10){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 11){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 12){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 13){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else{
+				return;
+			}
+		}else{
+			return;
+		}
+		
+	}
+	
+	//Click function by system
+	
+	function simulateClick(x, y) {
     var clickEvent= document.createEvent('MouseEvents');
     clickEvent.initMouseEvent(
     'click', true, true, window, 0,
@@ -26,81 +163,4 @@
 	    var b = y;
 	    simulateClick(a,b);
     }
-    
-    }
-	function start() {
-		pos(60, 650);		
-		pos(60, 650);
-	}
-	
-	function FindPath() {
-	$.when(SetA()).then(SetB());
-	}
-	
-	function SetA(){
-	var a = document.getElementById("Dept").value;
-	if (a == "Entrance"){
-		pos(60, 650);
-	}
-	else if (a == "TM1-01"){
-		pos(50, 500);
-	}
-	else if (a == "Blue Zone"){
-		pos(50, 500);
-	}
-	else if (a == "Red Zone"){
-		pos(50, 310);
-	}
-	else if (a == "Yellow Zone"){
-		pos(500, 310);
-	}
-	else if (a == "Green Zone"){
-		pos(500, 140);
-	}
-	}
-	
-	function SetB(){
-	var b = document.getElementById("Goal").value;
-	var position;
-	
-	if (b == "Set Class"){
-		pos(60, 650);		
-		return;
-	}
-	else if (b == "Entrance"){
-		pos(60, 650);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "TM1-01"){
-		pos(50, 500);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "Blue Zone"){
-		pos(50, 500);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "Red Zone"){
-		pos(50, 310);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "Yellow Zone"){
-		pos(500, 310);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
-	else if (b == "Green Zone"){
-		pos(500, 140);
-		position = b;
-		document.getElementById("Dept").value = b;
-		return;
-	}
 	}

@@ -3,13 +3,11 @@ define(["jquery", "board", "renderer", "pathFinder"], function($,boardFactory,re
 		board.reset(boardType);
 		renderer.render(board);
 	}
-	
 	return {
 		board: null,
 		begin: function() {
 			var that = this;
 			var canvas = $('#astarCanvas');
-			
 			$('#resetButton').click(function() {
 				reset(that.board, $('#boardType').val());
 			});
@@ -33,7 +31,6 @@ define(["jquery", "board", "renderer", "pathFinder"], function($,boardFactory,re
 			
 			this.board = boardFactory.create();
 			this.board.clear();
-			
 			renderer.render(this.board);
 		}
 	};

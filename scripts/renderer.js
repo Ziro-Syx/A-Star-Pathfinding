@@ -20,7 +20,7 @@ define(["jquery"], function($) {
 		var columnIndex;
 		var rowIndex;
 		
-		context.strokeStyle="rgba(228,228,228,1.0)";
+		context.strokeStyle="rgba(228,228,228,0)";
 		for (rowIndex = 1; rowIndex < boardMetrics.boardHeight; rowIndex++) {
 			context.moveTo(0, rowIndex * boardMetrics.cellHeight + 0.5);
 			context.lineTo(boardMetrics.width, rowIndex * boardMetrics.cellHeight + 0.5);
@@ -86,7 +86,7 @@ define(["jquery"], function($) {
 			
 			context.clearRect(0, 0, metrics.width, metrics.height);
 			
-			context.fillStyle = "rgba(38,104,209,1.0)";
+			context.fillStyle = "rgba(38,104,209,0)";
 			for (rowIndex = 0; rowIndex < board.height; rowIndex++) {
 				for (columnIndex = 0; columnIndex < board.width; columnIndex++) {
 					movementCost = board.getMovementCost(columnIndex, rowIndex);

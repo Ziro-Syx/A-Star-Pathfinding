@@ -1,169 +1,236 @@
-
-	var deptstart = [];
-	var deptchange = [];
-	var goalend = [];
-	var goalchange = [];
-	var leveldept;
-	var levelgoal;
-	var level;
+//Database of the rooms
 	
-	
-	
-	function Start(){
-		document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
-		ChangeFloor(0);
-		Entrance();
-	}
-	function Entrance(){
-		ChangeFloor(0);
-		pos(60, 650); //Two click on the entrance to be on the starting point.
+	function TransData(zone,room){
+	if (zone == "Entrance"){
+		level = '0';
 		pos(60, 650);
-	}
-	
-	function FindPath() {
-	Start();
-	$.when(SetA()).then(SetB()); //Click on location dictated by 1st box, then on the 2nd one.
-	TransData(deptstart[0],deptstart[1]);
-	leveldept = level;
-	TransData(goalend[0],goalend[1]);
-	levelgoal = level;
-
-	if(leveldept != 0 || leveldept != levelgoal){
-		if (leveldept == levelgoal){
-			ChangeFloor(leveldept);
-			TransData(deptstart[0],deptstart[1]);
-			TransData(goalend[0],goalend[1]);
-		}else{
-		ChangeFloor(leveldept);
-		TransData(deptstart[0],deptstart[1]);
-		pos(225, 420);
-		alert("Your path is on multiple floors. \nTo see the rest of the way to go, click on toggle below the map !")
-		}
+	}else if (zone == "Blue Zone"){
+		level = '0';
+		pos(50, 500);
+	}else if (zone == "Red Zone"){
+		level = '0';
+		pos(50, 310);
+	}else if (zone == "Yellow Zone"){
+		level = '0';
+		pos(500, 310);
+	}else if (zone == "Green Zone"){
+		level = '0';
+		pos(500, 140);
+	}else if (zone =="TMG"){
+		level = '0';
+		pos(50, 400);
+	}else if (zone =="BEL"){
+		level = '0';
+				if(room >= 0 && room <20){
+					pos(500, 140);
+				}else if(room >= 20 && room <40){
+					pos(450, 140);
+				}else if(room >= 40 && room <60){
+					pos(400, 140);
+				}else{
+					pos(60, 650);
+					alert("Unknown Location/Destination");
+					return;
+				}
+	}else if (zone =="TM1"){
+		level = '1';
+		pos(50, 400);
+	}else if (zone =="T1"){
+		level = '1';
+				if(room >= 0 && room <20){
+					pos(165, 400);
+				}else if(room >= 20 && room <40){
+					pos(95, 400);
+				}else if(room >= 40 && room <60){
+					pos(45, 400);
+				}else{
+					pos(165, 400);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="TM2"){
+		level = '2';
+		pos(50, 400);
+	}else if (zone =="T2"){
+		level = '2';
+		if(room >= 0 && room <20){
+					pos(165, 395);
+				}else if(room >= 20 && room <40){
+					pos(95, 400);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T3"){
+		level = '3';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T4"){
+		level = '4';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T5"){
+		level = '5';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T6"){
+		level = '6';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T7"){
+		level = '7';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T8"){
+		level = '8';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T9"){
+		level = '9';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T10"){
+		level = '10';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T11"){
+		level = '11';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T12"){
+		level = '12';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else if (zone =="T13"){
+		level = '13';
+				if(room >= 0 && room <5){
+					pos(390, 440);
+				}else if(room >= 5 && room <10){
+					pos(390, 320);
+				}else if(room >= 10 && room <15){
+					pos(135, 320);
+				}else if(room >= 15 && room <20){
+					pos(135, 440);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+					return;
+				}	
+	}else{
+		pos(60, 650);
+		alert("Unknown Location/Destination");
+		return;	
 	}
 	return;
-	}
-	
-	function levels(){
-		if(leveldept != levelgoal){
-			if (level == leveldept){
-				$('#Floors').val(levelgoal);
-				ChangeFloor(levelgoal);
-				MultiFindPath();
-			}else if (level == levelgoal){
-				$('#Floors').val(leveldept);
-				ChangeFloor(leveldept);
-				MultiFindPath();
-			}
-		}else{
-			alert("You don't need to go on another floor for your path.");
-			return;
-		}
-	}
-	
-	function MultiFindPath(){
-		if (level == leveldept){
-			pos(225, 420);
-			TransData(goalend[0],goalend[1]);
-		} else if (level == levelgoal){
-			TransData(deptstart[0],deptstart[1]);
-			pos(225, 420);
-			
-		}
-	}
-	
-	function SetA(){
-	var aw = document.getElementById("Dept").value; //Get value from Text box with same ID
-	var a = [];
-	a = aw.split("-"); // Split with "-"
-	deptstart[0] = a [0];
-	deptstart[1] = a [1];
-	}
-	
-	function SetB(){
-	var bh = document.getElementById("Goal").value; //Get value from Text box with same ID
-	var b = [];
-	b = bh.split("-"); // Split with "-"
-	goalend[0] = b [0];
-	goalend[1] = b [1];
-	}
-	
-	function ChangeFloor(x){
-		if(x == 0){
-			$('#boardType').val('FloorZero').change();
-			$('#resetButton').click();
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
-		}else if(x == 1){
-			$('#boardType').val('FloorOne').change();
-			$('#resetButton').click();
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorOne.png')";
-			return;
-		}else if(x == 2){
-			$('#boardType').val('FloorOne').change();
-			$('#resetButton').click();
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorTwo.png')";
-			return;
-		}else if(x >= 3 && x < 14){
-			$('#boardType').val('FloorUpper').change();
-			$('#resetButton').click();
-			if (x == 3){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
-			}else if (x == 4){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
-			}else if (x == 5){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
-			}else if (x == 6){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
-			}else if (x == 7){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
-			}else if (x == 8){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
-			}else if (x == 9){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
-			}else if (x == 10){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
-			}else if (x == 11){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
-			}else if (x == 12){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
-			}else if (x == 13){
-			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
-			}else{
-				return;
-			}
-		}else{
-			return;
-		}
-		
-	}
-	
-	//Click function by system
-	
-	function simulateClick(x, y) {
-    var clickEvent= document.createEvent('MouseEvents');
-    clickEvent.initMouseEvent(
-    'click', true, true, window, 0,
-    0, 0, x, y, false, false,
-    false, false, 0, null
-    );
-    document.elementFromPoint(x, y).dispatchEvent(clickEvent);
-    }
-	
-    function pos(x,y){
-	var w = window,
-		d = document,
-		e = d.documentElement,
-		g = d.getElementsByTagName('body')[0],
-		iw = w.innerWidth || e.clientWidth || g.clientWidth,
-		ih = w.innerHeight|| e.clientHeight|| g.clientHeight;
-		
-    if (iw>=550){
-	    var val = (iw-550)/2;
-	    var a = val + x;
-	    var b = y;
-	    simulateClick(a,b);
-    }else{
-	    var a = x;
-	    var b = y;
-	    simulateClick(a,b);
-    }
 	}

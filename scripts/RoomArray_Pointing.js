@@ -6,9 +6,13 @@
 	var leveldept;
 	var levelgoal;
 	var level;
+<<<<<<< HEAD
 	
 	
 	
+=======
+
+>>>>>>> origin/gh-pages
 	function Start(){
 		document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
 		ChangeFloor(0);
@@ -20,6 +24,11 @@
 		pos(60, 650);
 	}
 	
+<<<<<<< HEAD
+=======
+
+	
+>>>>>>> origin/gh-pages
 	function FindPath() {
 	Start();
 	$.when(SetA()).then(SetB()); //Click on location dictated by 1st box, then on the 2nd one.
@@ -36,7 +45,11 @@
 		}else{
 		ChangeFloor(leveldept);
 		TransData(deptstart[0],deptstart[1]);
+<<<<<<< HEAD
 		pos(225, 420);
+=======
+		pos(195, 400);
+>>>>>>> origin/gh-pages
 		alert("Your path is on multiple floors. \nTo see the rest of the way to go, click on toggle below the map !")
 		}
 	}
@@ -62,11 +75,19 @@
 	
 	function MultiFindPath(){
 		if (level == leveldept){
+<<<<<<< HEAD
 			pos(225, 420);
 			TransData(goalend[0],goalend[1]);
 		} else if (level == levelgoal){
 			TransData(deptstart[0],deptstart[1]);
 			pos(225, 420);
+=======
+			pos(195, 400);
+			TransData(goalend[0],goalend[1]);
+		} else if (level == levelgoal){
+			TransData(deptstart[0],deptstart[1]);
+			pos(195, 400);
+>>>>>>> origin/gh-pages
 			
 		}
 	}
@@ -97,6 +118,7 @@
 			$('#resetButton').click();
 			document.getElementById('astar').style.backgroundImage = "url('Images/FloorOne.png')";
 			return;
+<<<<<<< HEAD
 		}else if(x == 2){
 			$('#boardType').val('FloorOne').change();
 			$('#resetButton').click();
@@ -106,6 +128,14 @@
 			$('#boardType').val('FloorUpper').change();
 			$('#resetButton').click();
 			if (x == 3){
+=======
+		}else if(x >= 2 && x < 14){
+			$('#boardType').val('FloorUpper').change();
+			$('#resetButton').click();
+			if (x == 2){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 3){
+>>>>>>> origin/gh-pages
 			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
 			}else if (x == 4){
 			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	

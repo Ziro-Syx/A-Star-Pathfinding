@@ -16,7 +16,11 @@
 	}else if (zone == "Green Zone"){
 		level = '0';
 		pos(500, 140);
+<<<<<<< HEAD
 	}else if (zone =="TMG"){
+=======
+	}else if (zone =="TM"){
+>>>>>>> origin/gh-pages
 		level = '0';
 		pos(50, 400);
 	}else if (zone =="BEL"){
@@ -31,23 +35,34 @@
 					pos(60, 650);
 					alert("Unknown Location/Destination");
 					return;
+<<<<<<< HEAD
 				}
 	}else if (zone =="TM1"){
 		level = '1';
 		pos(50, 400);
+=======
+				}		
+>>>>>>> origin/gh-pages
 	}else if (zone =="T1"){
 		level = '1';
 				if(room >= 0 && room <20){
 					pos(165, 400);
 				}else if(room >= 20 && room <40){
+<<<<<<< HEAD
 					pos(95, 400);
 				}else if(room >= 40 && room <60){
 					pos(45, 400);
+=======
+					pos(125, 400);
+				}else if(room >= 40 && room <60){
+					pos(85, 400);
+>>>>>>> origin/gh-pages
 				}else{
 					pos(165, 400);
 					alert("Unknown Location/Destination");
 					return;
 				}	
+<<<<<<< HEAD
 	}else if (zone =="TM2"){
 		level = '2';
 		pos(50, 400);
@@ -227,10 +242,52 @@
 					alert("Unknown Location/Destination");
 					return;
 				}	
+=======
+	}else if (zone =="T2"){
+		level = '2';
+		pos(195, 400);
+	}else if (zone =="T3"){
+		level = '3';
+		pos(195, 400);
+	}else if (zone =="T4"){
+		level = '4';
+		pos(195, 400);
+	}else if (zone =="T5"){
+		level = '5';
+		pos(195, 400);
+	}else if (zone =="T6"){
+		level = '6';
+		pos(195, 400);
+	}else if (zone =="T7"){
+		level = '7';
+		pos(195, 400);
+	}else if (zone =="T8"){
+		level = '8';
+		pos(195, 400);
+	}else if (zone =="T9"){
+		level = '9';
+		pos(195, 400);
+	}else if (zone =="T10"){
+		level = '10';
+		pos(195, 400);
+	}else if (zone =="T11"){
+		level = '11';
+		pos(195, 400);
+	}else if (zone =="T12"){
+		level = '12';
+		pos(195, 400);
+	}else if (zone =="T13"){
+		level = '13';
+		pos(195, 400);
+>>>>>>> origin/gh-pages
 	}else{
 		pos(60, 650);
 		alert("Unknown Location/Destination");
 		return;	
 	}
 	return;
+<<<<<<< HEAD
 	}
+=======
+	}
+>>>>>>> origin/gh-pages

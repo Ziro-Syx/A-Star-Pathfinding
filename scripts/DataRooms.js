@@ -53,6 +53,7 @@
 		pos(50, 400);
 	}else if (zone =="T2"){
 		level = '2';
+<<<<<<< HEAD
 				if(room >= 0 && room <5){
 					pos(390, 440);
 				}else if(room >= 5 && room <10){
@@ -64,6 +65,15 @@
 				}else{
 					pos(165, 420);
 					alert("Unknown Room at Floor " + level);
+=======
+		if(room >= 0 && room <20){
+					pos(165, 395);
+				}else if(room >= 20 && room <40){
+					pos(95, 400);
+				}else{
+					pos(165, 420);
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T3"){
@@ -78,7 +88,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T4"){
@@ -93,7 +107,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T5"){
@@ -108,7 +126,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T6"){
@@ -123,7 +145,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T7"){
@@ -138,7 +164,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T8"){
@@ -153,7 +183,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T9"){
@@ -168,7 +202,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T10"){
@@ -183,7 +221,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T11"){
@@ -198,7 +240,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T12"){
@@ -213,7 +259,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else if (zone =="T13"){
@@ -228,7 +278,11 @@
 					pos(135, 440);
 				}else{
 					pos(165, 420);
+<<<<<<< HEAD
 					alert("Unknown Room at Floor " + level);
+=======
+					alert("Unknown Location/Destination");
+>>>>>>> origin/gh-pages
 					return;
 				}	
 	}else{
@@ -237,4 +291,8 @@
 		return;	
 	}
 	return;
+<<<<<<< HEAD
 	}
+=======
+	}
+>>>>>>> origin/gh-pages

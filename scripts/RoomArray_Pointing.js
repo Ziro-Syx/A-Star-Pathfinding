@@ -8,6 +8,7 @@
 	var level;
 	
 	
+<<<<<<< HEAD
 	//Start Function
 	function Start(){
 		document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";   //Change Background to FloorZero.png
@@ -31,10 +32,31 @@
 	function FindPath() {
 	Start();																					  //Act as a reset
 	$.when(SetA()).then(SetB()); 																  //Click on location dictated by 1st box, then on the 2nd one.
+=======
+	
+	function Start(){
+		document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
+		ChangeFloor(0);
+		Entrance();
+	}
+	function Entrance(){
+		ChangeFloor(0);
+		pos(60, 650); //Two click on the entrance to be on the starting point.
+		pos(60, 650);
+	}
+	
+	function FindPath() {
+	Start();
+	$.when(SetA()).then(SetB()); //Click on location dictated by 1st box, then on the 2nd one.
+>>>>>>> origin/gh-pages
 	TransData(deptstart[0],deptstart[1]);
 	leveldept = level;
 	TransData(goalend[0],goalend[1]);
 	levelgoal = level;
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/gh-pages
 	if(leveldept != 0 || leveldept != levelgoal){
 		if (leveldept == levelgoal){
 			ChangeFloor(leveldept);
@@ -94,6 +116,7 @@
 	goalend[1] = b [1];
 	}
 	
+<<<<<<< HEAD
 	//This Function changes the background picture, and the position of the walls
 	function ChangeFloor(x){
 		if(x == 0){
@@ -132,6 +155,48 @@
 			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper/FloorTwelve.png')";	
 			}else if (x == 13){
 			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper/FloorThirteen.png')";	
+=======
+	function ChangeFloor(x){
+		if(x == 0){
+			$('#boardType').val('FloorZero').change();
+			$('#resetButton').click();
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorZero.png')";
+		}else if(x == 1){
+			$('#boardType').val('FloorOne').change();
+			$('#resetButton').click();
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorOne.png')";
+			return;
+		}else if(x == 2){
+			$('#boardType').val('FloorOne').change();
+			$('#resetButton').click();
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorTwo.png')";
+			return;
+		}else if(x >= 3 && x < 14){
+			$('#boardType').val('FloorUpper').change();
+			$('#resetButton').click();
+			if (x == 3){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 4){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 5){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 6){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 7){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 8){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";
+			}else if (x == 9){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 10){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 11){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 12){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+			}else if (x == 13){
+			document.getElementById('astar').style.backgroundImage = "url('Images/FloorUpper.png')";	
+>>>>>>> origin/gh-pages
 			}else{
 				return;
 			}

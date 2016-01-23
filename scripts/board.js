@@ -1,6 +1,9 @@
 define(["metrics"], function(metrics) {	
 	var patternBuilders = {
+<<<<<<< HEAD
 		//Wall Layout for the Floor Zero
+=======
+>>>>>>> origin/gh-pages
 		FloorZero: function(board) {
 			var columnIndex;
 			var fromTop;
@@ -47,6 +50,7 @@ define(["metrics"], function(metrics) {
 			}
 			for (columnIndex = 36; columnIndex <88; columnIndex ++) {
 				for (rowIndex = 70; rowIndex < 107; rowIndex++) {
+<<<<<<< HEAD
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
@@ -141,6 +145,8 @@ define(["metrics"], function(metrics) {
 			}
 			for (columnIndex = 36; columnIndex <88; columnIndex ++) {
 				for (rowIndex = 70; rowIndex < 107; rowIndex++) {
+=======
+>>>>>>> origin/gh-pages
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
@@ -188,7 +194,103 @@ define(["metrics"], function(metrics) {
 				}
 			}
 		},
+<<<<<<< HEAD
 		//Wall Layout for the upper Floors
+=======
+		FloorOne: function(board) {
+			var columnIndex;
+			var fromTop;
+			var rowIndex;
+			var calculatedRowIndex;
+
+			fromTop = true;
+
+			for (columnIndex = 0; columnIndex <47; columnIndex ++) {
+				for (rowIndex = 0; rowIndex < 44; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 47; columnIndex <100; columnIndex ++) {
+				for (rowIndex = 0; rowIndex < 15; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 51; columnIndex <100; columnIndex ++) {
+				for (rowIndex = 18; rowIndex < 44; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 11; columnIndex <33; columnIndex ++) {
+				for (rowIndex = 48; rowIndex < 58; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 36; columnIndex <88; columnIndex ++) {
+				for (rowIndex = 48; rowIndex < 60; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 58; columnIndex <88; columnIndex ++) {
+				for (rowIndex = 60; rowIndex < 70; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 36; columnIndex <88; columnIndex ++) {
+				for (rowIndex = 70; rowIndex < 107; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 11; columnIndex <33; columnIndex ++) {
+				for (rowIndex = 62; rowIndex < 78; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 11; columnIndex <23; columnIndex ++) {
+				for (rowIndex = 78; rowIndex < 84; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 11; columnIndex <14; columnIndex ++) {
+				for (rowIndex = 84; rowIndex < 94; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 4; columnIndex <7; columnIndex ++) {
+				for (rowIndex = 44; rowIndex < 115; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 95; columnIndex <100; columnIndex ++) {
+				for (rowIndex = 44; rowIndex < 115; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 18; columnIndex <50; columnIndex ++) {
+				for (rowIndex = 89; rowIndex < 96; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+			for (columnIndex = 28; columnIndex <50; columnIndex ++) {
+				for (rowIndex = 82; rowIndex < 107; rowIndex++) {
+					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
+					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
+				}
+			}
+		},
+>>>>>>> origin/gh-pages
 		FloorUpper: function(board) {
 			var columnIndex;
 			var fromTop;
@@ -228,7 +330,11 @@ define(["metrics"], function(metrics) {
 				}
 			}
 			for (columnIndex = 26; columnIndex <32; columnIndex ++) {
+<<<<<<< HEAD
 				for (rowIndex = 61; rowIndex < 102; rowIndex++) {
+=======
+				for (rowIndex = 62; rowIndex < 102; rowIndex++) {
+>>>>>>> origin/gh-pages
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
@@ -241,7 +347,11 @@ define(["metrics"], function(metrics) {
 				}
 			}
 			for (columnIndex = 64; columnIndex <70; columnIndex ++) {
+<<<<<<< HEAD
 				for (rowIndex = 61; rowIndex < 102; rowIndex++) {
+=======
+				for (rowIndex = 62; rowIndex < 102; rowIndex++) {
+>>>>>>> origin/gh-pages
 					calculatedRowIndex = fromTop ? rowIndex : board.height-1-rowIndex;
 					board.setMovementCost(columnIndex, calculatedRowIndex, board.movementCosts.impassable);
 				}
@@ -254,10 +364,18 @@ define(["metrics"], function(metrics) {
 				}
 			}
 		},
+<<<<<<< HEAD
 		//Empty Layout for Compatibility 
 		Empty: function(board) {
 			
 		}
+=======
+		Empty: function(board) {
+			
+		}
+		
+	}
+>>>>>>> origin/gh-pages
 		
 	}
 	

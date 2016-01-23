@@ -12,7 +12,6 @@ div#Top-Panel {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-<<<<<<< HEAD
 div#Text-Boxes {
   height: 40px;
   width: 40%;
@@ -35,10 +34,6 @@ div#Text-Boxes {
 
 .TB{
 	width:100px;
-=======
-div#Text-Boxes{
-  margin-left:0px;
->>>>>>> origin/gh-pages
 }
 
 button{
@@ -51,10 +46,6 @@ button{
 
 #Dept,#Goal,#Toggle{
 	float:right;
-<<<<<<< HEAD
-=======
-	margin-right: 0px;
->>>>>>> origin/gh-pages
 }
 
 div#astar {

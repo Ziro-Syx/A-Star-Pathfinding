@@ -5,22 +5,50 @@ body {
 
 div#Top-Panel {
   width: 550px;
+  height: 40px;
   margin: 0 auto;
-  margin-top:20px;
-  margin-bottom:10px;
+  margin-top:10px;
+  margin-bottom:0px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-div#Text-Boxes{
-  margin-left:10px;
+div#Text-Boxes {
+  height: 40px;
+  width: 40%;
+  position: absolute;
+}
+
+#From,#To{
+	float:left;
+	position: relative;
+	padding:0px;
+	margin-right: 10px;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+#Swap{
+	float:left;
+	position: relative;
+	padding:0px;
+}
+
+.TB{
+	width:100px;
 }
 
 button{
+	margin-right: 0px;
+	margin-top: 0px;
+	padding: 0;
+	border: none;
+	background: none;
+}
+
+#Dept,#Goal,#Toggle{
 	float:right;
-	margin-right: 20px;
 }
 
 div#astar {
-  background-image: url("../Images/background.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 550px;
@@ -35,17 +63,21 @@ div#Bottom-Panel{
   margin-top: 10px;
 }
 
+#Floors,#boardType,#resetButton{
+	display:none;
+}
+
 span.right {
   float: right;
   text-align: center;
-  margin-top: 10px;
-  margin-right: 20px;
+  margin-top: 0px;
+  margin-right: 0px;
 }
 
 span.left {
-  float: left;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 20px;
+	 display:inline-block ;
+  margin: auto;
+  padding: 0;
+  position: absolute;
 }
 
